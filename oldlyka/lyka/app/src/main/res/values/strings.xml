@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">lyka</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_text">Please Enter Your \nMobile no.</string>
+    <string name="sendotp_text">Send Otp</string>
+    <string name="organisation_text">Do you have an \nOrganisation Code?</string>
+    <string name="code_text">Enter Code here</string>
+    <string name="otpissent_text">An OTP is sent to</string>
+    <string name="enterotp_text">Enter Otp</string>
+    <string name="Next_button">Next</string>
+    <string name="heythere_text">hey there!</string>
+    <string name="entername_text">Enter Your Name</string>
+    <string name="age_text">Age</string>
+    <string name="pronoun_text">Pronoun</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="next_appointment">Next Appointment</string>
+    <string name="see_all">See all</string>
+    <string name="topdoctors">TopDoctors</string>
+    <string name="join">Join</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">view all</string>
+
+
+</resources>
