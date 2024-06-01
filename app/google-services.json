@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658779705814",
+    "project_id": "lyka-387a2",
+    "storage_bucket": "lyka-387a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658779705814:android:553505666a040a46995477",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1dQil8NR2nJ6WbGBlWTNyqtG-X2jFI8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

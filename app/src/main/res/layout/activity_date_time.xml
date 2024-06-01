@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DateTimeActivity">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:chipSpacingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="10dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="Virtual"
+            android:textSize="24sp"
+            app:chipEndPadding="20dp"
+            app:chipIcon="@drawable/baseline_videocam_24"
+            app:chipIconSize="40dp"
+            app:chipIconEnabled="true"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            style="@style/CustomChoiceChip"
+            app:chipIconEnabled="true"
+            app:chipCornerRadius="10dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="InPerson"
+            android:textSize="24sp"
+            app:chipEndPadding="20dp"
+            app:chipIcon="@drawable/baseline_home_24"
+            app:chipIconSize="40dp"
+             />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Session Mode"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Select the date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup2" />
+
+    <TextView
+        android:id="@+id/picklo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Time Slot"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+
+        app:layout_constraintTop_toBottomOf="@id/hsc" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsc"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/white"
+        android:scrollbars="none"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_availabledates"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            app:selectionRequired="true"
+
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <!--
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_firstdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12th feb" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13th feb" />
+-->
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_availabletimes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/picklo"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_firstslot"
+            style="@style/CustomChoiceChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/CustomChoiceChip"
+            app:chipCornerRadius="2dp"
+            app:chipStrokeWidth="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Patient Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cg_availabletimes"
+        app:layout_constraintTop_toBottomOf="@id/cg_availabletimes" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/pt"
+        app:layout_constraintTop_toBottomOf="@+id/pt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="#EEFDDC"
+        android:text="@string/next"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
