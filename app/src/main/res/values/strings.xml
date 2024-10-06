@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="chats">Chats</string>
+    <string name="library">Library</string>
+    <string name="concern">Concern</string>
+    <string name="psychiatrist">Psychiatrist</string>
+    <string name="_18_years">18 years</string>
+    <string name="dr_rakesh_joshi">Dr. Rakesh Joshi</string>
+    <string name="see_all">See All</string>
+    <string name="enter_your_mobile_number">Enter Your Mobile Number</string>
+    <string name="get_otp">Get Otp</string>
+    <string name="vijay_joshi">Vijay Joshi</string>
+    <string name="_91_8377055197">+91 8377055197</string>
+    <string name="sessions">Sessions</string>
+    <string name="edit">Edit</string>
+    <string name="psychologist">Psychologist</string>
+    <string name="psychiatrist2">Psychiatrist</string>
+    <string name="call_us">Call Us</string>
+    <string name="chat_us">Chat us</string>
+    <string name="no_upcoming_session_yet">No upcoming session yet</string>
+    <string name="are_you_sure_you_wanna_cancel_this_session">Cancel this session?</string>
+    <string name="cancel_this_session">Cancel this session?</string>
+    <string name="what_s_your_good_name">What\'s your good name?</string>
+    <string name="next">Next</string>
+</resources>
