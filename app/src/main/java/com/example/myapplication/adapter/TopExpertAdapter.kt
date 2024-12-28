@@ -24,6 +24,9 @@ class TopExpertAdapter(val context: Context,var datalist : ArrayList<TopExpertsM
 
     }
 
+
+    
+
     override fun getItemCount(): Int {
         return datalist.size
     }
@@ -42,8 +45,11 @@ class TopExpertAdapter(val context: Context,var datalist : ArrayList<TopExpertsM
         holder.expertcharge.text =  datalist.get(position).expertcharge.toString()
       //  holder.expertpic.setImageResource(datalist.get(position).expertpic)
 
+        val expertid = datalist.get(position).expertid
+
         holder.booknow.setOnClickListener {
-            val intent = Intent(context, SearchActivity:: class.java)
+            val intent = Intent(context, ExpertprofileActivity:: class.java)
+            intent.putExtra("expertid", expertid)
             context.startActivity(intent)
         }
 

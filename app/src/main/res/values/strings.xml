@@ -25,4 +25,7 @@
     <string name="cancel_this_session">Cancel this session?</string>
     <string name="what_s_your_good_name">What\'s your good name?</string>
     <string name="next">Next</string>
+    <string name="search_experts">search experts...</string>
+    <string name="join_session">Join Session</string>
+    <string name="book_now">Book Now</string>
 </resources>

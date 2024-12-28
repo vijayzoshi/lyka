@@ -40,6 +40,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+
+
 }
 
 dependencies {
@@ -80,6 +83,10 @@ dependencies {
 
     // Splash Api
     implementation("androidx.core:core-splashscreen:1.0.0")
+
+    // glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
 
 
 

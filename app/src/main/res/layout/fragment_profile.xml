@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
 
     android:background="#FFFFFF"
-    tools:context=".ProfileActivity">
+    tools:context=".ui.ProfileFragment">
 
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="40dp"
         android:text="@string/vijay_joshi"
 
         android:textColor="#000000"

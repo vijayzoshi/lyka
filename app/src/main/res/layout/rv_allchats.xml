@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
          >
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_expertchatpic"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -43,15 +43,15 @@
                 android:id="@+id/tv_expertlastmsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
                 android:text="Hi! How are you doing?"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_expertchatpic"
-                app:layout_constraintStart_toStartOf="@+id/tv_expertchatname" />
+                app:layout_constraintStart_toStartOf="@+id/tv_expertchatname"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expertchatname" />
 
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="1dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="5dp"

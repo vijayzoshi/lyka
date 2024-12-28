@@ -2,7 +2,9 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.adapter.TopExpertAdapter
@@ -23,20 +25,24 @@ class SearchActivity : AppCompatActivity() {
     lateinit var expertAapter : TopExpertAdapter
     lateinit var expertArrayList : ArrayList<TopExpertsModel>
     lateinit var filteredArrayList : ArrayList<TopExpertsModel>
-
-
     lateinit var expertSv : androidx.appcompat.widget.SearchView
     lateinit var databaseRefrence : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        val toolbar = findViewById<View>(R.id.my_toolbar) as Toolbar
+
+        setSupportActionBar(toolbar)
+
 
         expertArrayList = ArrayList<TopExpertsModel>()
         filteredArrayList = ArrayList<TopExpertsModel>()
         expertRecyclerView = findViewById(R.id.rv_expertss)
         expertRecyclerView.layoutManager = LinearLayoutManager(this)
         expertAapter = TopExpertAdapter(this@SearchActivity, expertArrayList)
+        expertRecyclerView.adapter = expertAapter
+
 
 
         databaseRefrence = FirebaseDatabase.getInstance().getReference("experts")
@@ -62,7 +68,6 @@ class SearchActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 if (newText != null) {
                     search(newText)

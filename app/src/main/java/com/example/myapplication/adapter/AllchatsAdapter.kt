@@ -21,7 +21,7 @@ class AllchatsAdapter(val context: Context, var datalist: ArrayList<AllChatsmode
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
 
-        var view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_allchats, parent, false)
+        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_allchats, parent, false)
         return AllchatsAdapter.MyViewHolder(view)
     }
 

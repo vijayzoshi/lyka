@@ -1,13 +1,17 @@
-package com.example.myapplication
+package com.example.myapplication.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.example.myapplication.FaqActivity
+import com.example.myapplication.HelpActivity
+import com.example.myapplication.ModelBottomSheetDialog
+import com.example.myapplication.R
+import com.example.myapplication.SessionActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -15,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.getValue
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
 
     lateinit var faqCardview : CardView
@@ -27,25 +31,22 @@ class ProfileActivity : AppCompatActivity() {
     lateinit var editIv : ImageView
     lateinit var databaseReference: DatabaseReference
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-
-   //     installSplashScreen()
-        setContentView(R.layout.activity_profile)
-
-        usernameTv = findViewById(R.id.tv_username)
-        usernumberTv = findViewById(R.id.tv_usernumber)
-        editIv = findViewById(R.id.iv_edit)
+        usernameTv = view.findViewById(R.id.tv_username)
+        usernumberTv = view.findViewById(R.id.tv_usernumber)
+        editIv = view.findViewById(R.id.iv_edit)
 
         databaseReference = FirebaseDatabase.getInstance().getReference("users")
-        databaseReference.addValueEventListener(object :ValueEventListener {
+        databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                usernameTv.text = snapshot.child("1").child("username").getValue<String>()
+                usernameTv.text =  snapshot.child("1").child("username").getValue<String>()
                 usernumberTv.text = snapshot.child("1").child("usernumber").getValue<String>()
             }
+
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
@@ -53,36 +54,37 @@ class ProfileActivity : AppCompatActivity() {
         )
 
         editIv.setOnClickListener {
-/*
-            val modalBottomSheetDialog = ModelBottomSheetDialog()
-            modalBottomSheetDialog.show(supportFragmentManager, ModelBottomSheetDialog.TAG)
-*/
+
+               //     val modalBottomSheetDialog = ModelBottomSheetDialog()
+             //       modalBottomSheetDialog.show(supportFragmentManager, ModelBottomSheetDialog.TAG)
+
         }
 
-        faqCardview = findViewById(R.id.cd_faq)
+        faqCardview = view.findViewById(R.id.cd_faq)
         faqCardview.setOnClickListener {
-           val intent = Intent(this, FaqActivity :: class.java)
-           startActivity(intent)
+            val intent = Intent(activity, FaqActivity::class.java)
+            startActivity(intent)
         }
 
 
-        sessionCardview = findViewById(R.id.cd_session)
+        sessionCardview = view.findViewById(R.id.cd_session)
         sessionCardview.setOnClickListener {
-            val intent = Intent(this, SessionActivity :: class.java)
+            val intent = Intent(activity, SessionActivity::class.java)
             startActivity(intent)
         }
 
 
-        helpCardview = findViewById(R.id.cd_help)
+        helpCardview = view.findViewById(R.id.cd_help)
         helpCardview.setOnClickListener {
-            val intent = Intent(this, HelpActivity :: class.java)
+            val intent = Intent(activity, HelpActivity::class.java)
             startActivity(intent)
         }
 
-        logoutCardview = findViewById(R.id.cd_logout)
+        logoutCardview = view.findViewById(R.id.cd_logout)
         logoutCardview.setOnClickListener {
 
         }
+
 
     }
 }

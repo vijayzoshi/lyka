@@ -24,6 +24,13 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             >
 
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cd_search"
                 android:layout_width="match_parent"
@@ -36,6 +43,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
 
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/sv_experts"
@@ -59,13 +67,11 @@
         android:id="@+id/rv_expertss"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/rv_experts"
         app:layout_constraintTop_toBottomOf="@+id/appbar_layout" />
 
 

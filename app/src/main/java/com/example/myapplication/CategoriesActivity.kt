@@ -18,42 +18,6 @@ class CategoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
           categoriesArraylist = ArrayList<CategoriesModel>()
-/*
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-        categoriesArraylist.add(  CategoriesModel(R.drawable.usericon, "Anxiety"))
-
-*/
-
-
-
-
-
-
-
-
          categoriesArraylist.add(  CategoriesModel(R.drawable.anxiety, "Anxiety"))
          categoriesArraylist.add(  CategoriesModel(R.drawable.adhd, "ADHD"))
          categoriesArraylist.add(  CategoriesModel(R.drawable.bipolar, "Bipolar"))

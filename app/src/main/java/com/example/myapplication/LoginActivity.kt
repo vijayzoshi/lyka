@@ -3,21 +3,14 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.FirebaseException
-import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthMissingActivityForRecaptchaException
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
-import com.google.firebase.auth.auth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import java.util.concurrent.TimeUnit
@@ -40,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        // for checking whether user is already logged in or not
         if(auth.currentUser != null){
             val intent = Intent(this, MainActivity2 :: class.java)
             startActivity(intent)
@@ -51,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
             if(number.length == 10) {
                 number = "+91$number"
                 startPhoneNumberVerification(number)
-                val intent = Intent(applicationContext, SignupActivity::class.java)
+                val intent = Intent(applicationContext, OtpActivity::class.java)
                 intent.putExtra("number", number)
                 startActivity(intent)
             }else{
@@ -69,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
 
             override fun onVerificationFailed(e: FirebaseException) {
                 // verification got fail.
-                Toast.makeText(applicationContext, "OTP verfication failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "OTP verfication failed1", Toast.LENGTH_SHORT).show()
             }
 
             override fun onCodeSent(
@@ -81,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                 resendToken = token
                 Toast.makeText(applicationContext, "OTP sent succesfully", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(applicationContext, SignupActivity::class.java)
+                val intent = Intent(applicationContext, OtpActivity::class.java)
                 intent.putExtra("storedverificationid", storedVerificationId)
                 startActivity(intent)
                 finish()
@@ -100,7 +94,7 @@ class LoginActivity : AppCompatActivity() {
                     val intent = Intent(applicationContext, NameActivity :: class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(applicationContext, "OTP verfication failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "OTP verfication failed2", Toast.LENGTH_SHORT).show()
                 }
             }
     }

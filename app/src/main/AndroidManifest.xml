@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
     <application
         android:allowBackup="true"
@@ -15,13 +21,14 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".SessionPassActivity"
+            android:exported="false" />
+        <activity
             android:name=".DateTimeActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".SearchActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".NameActivity"
             android:exported="false" />
@@ -36,32 +43,29 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FaqActivity"
-            android:exported="true"
-            android:theme="@style/Mysplash">
-
+            android:exported="true" >
 
         </activity>
         <activity
-            android:name=".ProfileActivity"
-            android:exported="true">
-          </activity>
+            android:name=".FaqActivity"
+            android:exported="true"
+            android:theme="@style/Mysplash" />
+
         <activity
             android:name=".SessionActivity"
             android:exported="false" />
         <activity
             android:name=".AllExpertsActivity"
-            android:exported="true">
-
+            android:exported="true" >
 
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".OtpActivity"
             android:exported="false" />
         <activity
             android:name=".PersonalchatActivity"
@@ -78,15 +82,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".NewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
