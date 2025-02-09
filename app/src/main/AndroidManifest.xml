@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,60 +20,57 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".SessionPassActivity"
+            android:name=".ui.BookingConfirmedActivity"
+            android:exported="false"
+            android:label="@string/title_activity_booking_confirmed"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".ui.SessionPassActivity"
             android:exported="false" />
         <activity
-            android:name=".DateTimeActivity"
+            android:name=".ui.DateTimeActivity"
             android:exported="true" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".ui.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".NameActivity"
+            android:name=".ui.NameActivity"
             android:exported="false" />
         <activity
-            android:name=".SessionDetailsActivity"
+            android:name=".ui.SessionDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".HelpActivity"
+            android:name=".ui.HelpActivity"
             android:exported="false" />
         <activity
-            android:name=".ExpertprofileActivity"
+            android:name=".ui.ExpertprofileActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
-            android:exported="true" >
-
-        </activity>
+            android:name=".ui.SplashActivity"
+            android:exported="true" />
         <activity
-            android:name=".FaqActivity"
-            android:exported="true"
-            android:theme="@style/Mysplash" />
-
+            android:name=".ui.FaqActivity"
+            android:exported="true"/>
         <activity
-            android:name=".SessionActivity"
+            android:name=".ui.SessionActivity"
             android:exported="false" />
         <activity
-            android:name=".AllExpertsActivity"
-            android:exported="true" >
-
-        </activity>
+            android:name=".ui.AllExpertsActivity"
+            android:exported="true" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" >
-
-        </activity>
+            android:name=".ui.LoginActivity"
+            android:exported="true" />
         <activity
-            android:name=".OtpActivity"
+            android:name=".ui.OtpActivity"
             android:exported="false" />
         <activity
-            android:name=".PersonalchatActivity"
+            android:name=".ui.PersonalchatActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoriesActivity"
+            android:name=".ui.CategoriesActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".ui.MainActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,10 +79,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewActivity"
+            android:name=".ui.NewActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true" />
     </application>
 

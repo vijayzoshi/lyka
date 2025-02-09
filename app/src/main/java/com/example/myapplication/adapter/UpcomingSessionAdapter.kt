@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.model.UpcomingSessionModel
 import com.example.myapplication.R
-import com.example.myapplication.SessionDetailsActivity
+import com.example.myapplication.ui.SessionDetailsActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DatabaseReference
@@ -51,7 +51,7 @@ class UpcomingSessionAdapter( val context: Context, var datalist: ArrayList<Upco
 
       */
 
-        val ss = datalist.get(position).sessionid
+        val ss = datalist.get(position).sessionid.toString()
 
 
         holder.cancel.setOnClickListener {
@@ -65,7 +65,7 @@ class UpcomingSessionAdapter( val context: Context, var datalist: ArrayList<Upco
                 }
                 .setPositiveButton("Yes") { dialog, which ->
 
-                    databaseRefrence.child(ss).removeValue()
+                    databaseRefrence.child("1").removeValue()
                     notifyItemChanged(position)
 
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".HelpActivity">
+    tools:context=".ui.HelpActivity">
 
 
     <TextView
@@ -26,7 +26,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cd_callus"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="25dp"
@@ -53,7 +53,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
                 android:text="@string/call_us"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -98,6 +99,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
                 android:text="Text Us"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 

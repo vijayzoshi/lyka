@@ -8,13 +8,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.ExpertprofileActivity
+import com.example.myapplication.ui.ExpertprofileActivity
 import com.example.myapplication.model.TopExpertsModel
 import com.example.myapplication.R
-import com.example.myapplication.SearchActivity
-import com.example.myapplication.SessionDetailsActivity
 
-class TopExpertAdapter(val context: Context,var datalist : ArrayList<TopExpertsModel>) : RecyclerView.Adapter<TopExpertAdapter.MyViewHolder>() {
+class TopExpertAdapter(val context: Context, var datalist : ArrayList<TopExpertsModel>) : RecyclerView.Adapter<TopExpertAdapter.MyViewHolder>() {
+
 
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -39,10 +38,17 @@ class TopExpertAdapter(val context: Context,var datalist : ArrayList<TopExpertsM
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         holder.expertname.text = datalist.get(position).expertname
+
         holder.expertdesign.text = datalist.get(position).expertdesign
-        holder.expertexp.text = datalist.get(position).expertexp.toString()
+
+        val exp = datalist.get(position).expertexp.toString() + " years"
+        holder.expertexp.text = exp
+
         holder.expertrating.text = datalist.get(position).expertrating.toString()
-        holder.expertcharge.text =  datalist.get(position).expertcharge.toString()
+
+        val charge =  "Rs." + datalist.get(position).expertcharge.toString()
+        holder.expertcharge.text = charge
+
       //  holder.expertpic.setImageResource(datalist.get(position).expertpic)
 
         val expertid = datalist.get(position).expertid
@@ -61,7 +67,7 @@ class TopExpertAdapter(val context: Context,var datalist : ArrayList<TopExpertsM
         val expertname = itemview.findViewById<TextView>(R.id.tv_expertname)
         val expertdesign = itemview.findViewById<TextView>(R.id.tv_designation)
         val expertexp = itemview.findViewById<TextView>(R.id.tv_experince)
-        val expertrating = itemview.findViewById<TextView>(R.id.tv_experince)
+        val expertrating = itemview.findViewById<TextView>(R.id.tv_ratings)
         val expertcharge = itemview.findViewById<TextView>(R.id.tv_charge)
         val booknow = itemview.findViewById<Button>(R.id.btn_booknow)
        // val expertpic = itemview.findViewById<ImageView>(R.id.iv_expertpic)

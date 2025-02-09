@@ -2,15 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/</item>
-        <item name="colorPrimaryDark">@color/white</item>
-        <item name="colorAccent">@color/lightpurple</item>
+
     </style>
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
 
-    <style name="ActionBarTitle" parent ="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name = "android:textStyle">bold</item>
+    <style name="ActionBarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="CustomChoiceChip" parent="Widget.MaterialComponents.Chip.Choice">
@@ -19,8 +17,8 @@
     </style>
 
 
-    <style name ="Mysplash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground"> @color/lightpurple</item>
+    <style name="Mysplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/lightpurple</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/baseline_videocam_24</item>
         <item name="windowSplashScreenAnimationDuration">3000</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.MyApplication</item>

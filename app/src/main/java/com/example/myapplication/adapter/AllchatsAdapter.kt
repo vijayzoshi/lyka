@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.model.AllChatsmodel
-import com.example.myapplication.PersonalchatActivity
+import com.example.myapplication.ui.PersonalchatActivity
 import com.example.myapplication.R
 import java.util.ArrayList
 

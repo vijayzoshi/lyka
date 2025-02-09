@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".DateTimeActivity">
+    tools:context=".ui.DateTimeActivity">
 
     <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup2"
+        android:id="@+id/cg_session"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -17,10 +17,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView8"
-        app:singleSelection="true">
+        app:singleSelection="true"
+        app:selectionRequired="true">
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
+            android:id="@+id/chip_virtual"
             style="@style/CustomChoiceChip"
             app:chipCornerRadius="10dp"
             app:chipStrokeWidth="1dp"
@@ -35,7 +36,7 @@
             />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
+            android:id="@+id/chip_inperson"
             style="@style/CustomChoiceChip"
             app:chipIconEnabled="true"
             app:chipCornerRadius="10dp"
@@ -73,7 +74,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/cg_session" />
 
     <TextView
         android:id="@+id/picklo"
@@ -266,15 +267,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_next"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:background="#EEFDDC"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/lykablue"
         android:text="@string/next"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

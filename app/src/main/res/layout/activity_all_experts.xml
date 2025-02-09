@@ -5,7 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".AllExpertsActivity">
+    tools:context=".ui.AllExpertsActivity">
+
+    <ImageButton
+        android:id="@+id/ib_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/chipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chipGroup"
+        app:srcCompat="@drawable/baseline_info_24" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/cd_search"
+        app:layout_constraintStart_toStartOf="@+id/cd_search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_psychologist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/psychologist"
+            android:textSize="10sp"
+            android:textStyle="bold"
+
+            app:chipBackgroundColor="@color/white"
+
+            app:chipEndPadding="20dp"
+            app:chipStartPadding="20dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_psychiatrist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/psychiatrist2"
+            android:textSize="10sp"
+
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="20dp"
+            app:chipStartPadding="20dp" />
+    </com.google.android.material.chip.ChipGroup>
 
 
     <androidx.cardview.widget.CardView
@@ -59,60 +110,6 @@
         app:layout_constraintTop_toBottomOf="@+id/cd_search"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/rv_experts" />
-
-    <ImageButton
-        android:id="@+id/ib_info"
-        android:layout_width="17dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="10dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/chipGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chipGroup"
-        app:layout_constraintTop_toTopOf="@+id/chipGroup"
-        app:srcCompat="@drawable/baseline_info_24" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:selectionRequired="true"
-        app:singleSelection="true">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cp_psychologist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-
-            android:background="@color/white"
-            android:paddingTop="10dp"
-            android:text="@string/psychologist"
-            android:textSize="10sp"
-            android:textStyle="bold"
-
-            app:chipBackgroundColor="@color/white"
-
-            app:chipEndPadding="20dp"
-            app:chipStartPadding="20dp" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cp_psychiatrist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/psychiatrist2"
-            android:textSize="10sp"
-
-            app:chipBackgroundColor="@color/white"
-            app:chipEndPadding="20dp"
-            app:chipStartPadding="20dp" />
-    </com.google.android.material.chip.ChipGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

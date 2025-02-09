@@ -7,11 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import com.example.myapplication.FaqActivity
-import com.example.myapplication.HelpActivity
-import com.example.myapplication.ModelBottomSheetDialog
 import com.example.myapplication.R
-import com.example.myapplication.SessionActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -30,6 +26,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     lateinit var usernumberTv : TextView
     lateinit var editIv : ImageView
     lateinit var databaseReference: DatabaseReference
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -55,8 +52,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         editIv.setOnClickListener {
 
-               //     val modalBottomSheetDialog = ModelBottomSheetDialog()
-             //       modalBottomSheetDialog.show(supportFragmentManager, ModelBottomSheetDialog.TAG)
+            val modalBottomSheetDialog = BttomSheetName()
+            modalBottomSheetDialog.show(parentFragmentManager, BttomSheetName.TAG)
+
+
 
         }
 

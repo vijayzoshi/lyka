@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".SearchActivity">
+    tools:context=".ui.SearchActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
@@ -65,6 +65,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_expertss"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -73,6 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/rv_experts"
         app:layout_constraintTop_toBottomOf="@+id/appbar_layout" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

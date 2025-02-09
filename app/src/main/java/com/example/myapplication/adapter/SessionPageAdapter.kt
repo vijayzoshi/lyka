@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.myapplication.CompletesessionFragment
-import com.example.myapplication.UpcomingsessionFragment
+import com.example.myapplication.ui.CompletesessionFragment
+import com.example.myapplication.ui.UpcomingsessionFragment
 
 class SessionPageAdapter(fragmentManager : FragmentManager, lifecycle : Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle)  {
     override fun getItemCount(): Int {

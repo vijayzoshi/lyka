@@ -48,6 +48,8 @@
             </androidx.cardview.widget.CardView>
 
 
+
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
@@ -60,8 +62,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cd_search">
 
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pi_home"
+                    android:layout_gravity="center"
+                    app:indicatorColor = "@color/black"
+                    android:indeterminate="true"
+                  />
                 <com.denzcoskun.imageslider.ImageSlider
                     android:id="@+id/image_slider"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     app:iss_auto_cycle="true"
@@ -447,7 +459,6 @@
                         android:textColor="#0968F6"
                         android:textSize="12sp"
                         android:textStyle="bold"
-
                         app:icon="@drawable/baseline_keyboard_arrow_right_24"
                         app:iconGravity="textEnd"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -565,11 +576,14 @@
                 android:id="@+id/rv_experts"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_topexperts"
                 tools:listitem="@layout/rv_experts" />
+
+
             <!--
                 <com.google.android.material.appbar.AppBarLayout
                     android:layout_width="match_parent"
@@ -591,5 +605,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
